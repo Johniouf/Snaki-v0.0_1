@@ -13,8 +13,8 @@ let speed = 7;
 let tileCount = 20;
 let tileSize = canvas.width / tileCount - 2;
 
-let headX = 10;
-let headY = 10;
+let headX = 15;
+let headY = 15;
 const snakeParts = [];
 let tailLength = 2;
 
@@ -51,10 +51,19 @@ function drawGame() {
   drawScore();
 
   if (score > 5) {
-    speed = 9;
+    speed = 5;
   }
   if (score > 10) {
-    speed = 11;
+    speed = 10;
+  }
+  if (score > 20) {
+    speed = 20;
+  }
+  if (score > 30) {
+    speed = 30;
+  }
+  if (score > 100) {
+    speed = 100;
   }
 
   setTimeout(drawGame, 1000 / speed);
